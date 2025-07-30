@@ -1,0 +1,23 @@
+{
+  "name": "@aerosaltant/source",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewalderson/aerosaltant.git"
+  },
+  "author": "Andrew Alderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewalderson/aerosaltant/issues"
+  },
+  "homepage": "https://github.com/andrewalderson/aerosaltant#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7"
+  }
+}
