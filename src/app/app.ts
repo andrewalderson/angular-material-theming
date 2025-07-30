@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import { Banner } from './core/layout/banner/banner';
 
 @Component({
-  imports: [NxWelcome, RouterModule],
+  imports: [RouterModule, Banner],
   selector: 'aero-root',
-  template: `<aero-nx-welcome></aero-nx-welcome>
-    <router-outlet></router-outlet>`,
-  styles: ``,
+  template: `<aero-banner /><router-outlet></router-outlet>`,
+  styles: `
+    :host {
+      display: block;
+      position: relative;
+    }
+    aero-banner {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+  `,
 })
-export class App {
-  protected title = 'aerosaltant';
-}
+export class App {}
