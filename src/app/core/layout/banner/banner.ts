@@ -1,15 +1,17 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
+import { ThemeSwitcher } from '../../theme/theme-switcher';
 import { Logo } from '../logo/logo';
 
 @Component({
   selector: 'aero-banner',
-  imports: [Logo, RouterLink, MatButton],
+  imports: [Logo, RouterLink, MatButton, ThemeSwitcher],
   template: `<a routerLink="/" mat-button="text">
-    <aero-logo matButtonIcon />
-    <span>Aerosaltant</span>
-  </a>`,
+      <aero-logo matButtonIcon />
+      <span>Aerosaltant</span>
+    </a>
+    <aero-theme-switcher />`,
   styles: `
     @use '@angular/material' as mat;
     :host {
@@ -30,6 +32,10 @@ import { Logo } from '../logo/logo';
         text-label-text-size: var(--mat-sys-title-medium-size),
         text-label-text-weight: var(--mat-sys-title-medium-weight),
       ))
+    }
+
+    aero-theme-switcher {
+      margin-inline-start: auto;
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
