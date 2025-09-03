@@ -1,8 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'aero-nx-welcome',
+  selector: 'amt-nx-welcome',
   imports: [CommonModule],
   template: `
     <!--
@@ -432,7 +432,7 @@ import { CommonModule } from '@angular/common';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome aerosaltant 👋
+            Welcome angular-material-theming 👋
           </h1>
         </div>
         <!--  HERO  -->
@@ -801,7 +801,7 @@ nx run-many -t build test lint</pre>
               </svg>
               View project details
             </summary>
-            <pre>nx show project aerosaltant</pre>
+            <pre>nx show project angular-material-theming</pre>
           </details>
 
           <details>

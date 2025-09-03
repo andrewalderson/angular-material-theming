@@ -34,7 +34,7 @@ export default [
         'error',
         {
           type: 'attribute',
-          prefix: 'aero',
+          prefix: 'amt',
           style: 'camelCase',
         },
       ],
@@ -42,7 +42,7 @@ export default [
         'error',
         {
           type: 'element',
-          prefix: 'aero',
+          prefix: 'amt',
           style: 'kebab-case',
         },
       ],

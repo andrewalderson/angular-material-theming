@@ -1,8 +1,8 @@
 {
-  "name": "aerosaltant",
+  "name": "angular-material-theming",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "aero",
+  "prefix": "amt",
   "sourceRoot": "./src",
   "tags": [ ],
   "targets": {
@@ -10,7 +10,7 @@
       "executor": "@angular/build:application",
       "outputs": [ "{options.outputPath}" ],
       "options": {
-        "outputPath": "dist/aerosaltant",
+        "outputPath": "dist/angular-material-theming",
         "browser": "./src/main.ts",
         "polyfills": [ ],
         "tsConfig": "tsconfig.app.json",
@@ -52,10 +52,10 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "aerosaltant:build:production"
+          "buildTarget": "angular-material-theming:build:production"
         },
         "development": {
-          "buildTarget": "aerosaltant:build:development"
+          "buildTarget": "angular-material-theming:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -63,7 +63,7 @@
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
       "options": {
-        "buildTarget": "aerosaltant:build"
+        "buildTarget": "angular-material-theming:build"
       }
     },
     "lint": {
@@ -76,16 +76,16 @@
       "executor": "@nx/vite:test",
       "outputs": [ "{options.reportsDirectory}" ],
       "options": {
-        "reportsDirectory": "coverage/aerosaltant"
+        "reportsDirectory": "coverage/angular-material-theming"
       }
     },
     "serve-static": {
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "aerosaltant:build",
+        "buildTarget": "angular-material-theming:build",
         "port": 4200,
-        "staticFilePath": "dist/aerosaltant/browser",
+        "staticFilePath": "dist/angular-material-theming/browser",
         "spa": true
       }
     }

@@ -3,8 +3,8 @@
   "targetDefaults": {
     "@angular/build:application": {
       "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["default", "^default"]
+      "dependsOn": [ "^build" ],
+      "inputs": [ "default", "^default" ]
     },
     "@nx/eslint:lint": {
       "cache": true,
@@ -17,7 +17,7 @@
     },
     "@nx/vite:test": {
       "cache": true,
-      "inputs": ["default", "^default"]
+      "inputs": [ "default", "^default" ]
     }
   },
   "plugins": [
@@ -42,5 +42,5 @@
       "unitTestRunner": "vitest"
     }
   },
-  "defaultProject": "aerosaltant"
+  "defaultProject": "angular-material-theming"
 }

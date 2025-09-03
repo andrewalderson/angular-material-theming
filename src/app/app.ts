@@ -4,14 +4,14 @@ import { Banner } from './core/layout/banner/banner';
 
 @Component({
   imports: [RouterModule, Banner],
-  selector: 'aero-root',
-  template: `<aero-banner /><router-outlet></router-outlet>`,
+  selector: 'amt-root',
+  template: `<amt-banner /><router-outlet></router-outlet>`,
   styles: `
     :host {
       display: block;
       position: relative;
     }
-    aero-banner {
+    amt-banner {
       position: sticky;
       top: 0;
       z-index: 1000;

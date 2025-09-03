@@ -4,7 +4,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatMenu, MatMenuItem, MatMenuTrigger } from '@angular/material/menu';
 import { ThemeManager } from './theme-manager';
 
-export const SELECTOR = 'aero-theme-switcher';
+export const SELECTOR = 'amt-theme-switcher';
 
 @Component({
   selector: SELECTOR,

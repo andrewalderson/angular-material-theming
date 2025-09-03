@@ -5,13 +5,13 @@ import { ThemeSwitcher } from '../../theme/theme-switcher';
 import { Logo } from '../logo/logo';
 
 @Component({
-  selector: 'aero-banner',
+  selector: 'amt-banner',
   imports: [Logo, RouterLink, MatButton, ThemeSwitcher],
   template: `<a routerLink="/" mat-button="text">
-      <aero-logo matButtonIcon />
-      <span>Aerosaltant</span>
+      <amt-logo matButtonIcon />
+      <span>Angular Material Theming</span>
     </a>
-    <aero-theme-switcher />`,
+    <amt-theme-switcher />`,
   styles: `
     @use '@angular/material' as mat;
     :host {
@@ -22,11 +22,11 @@ import { Logo } from '../logo/logo';
       align-items: center;
     }
 
-    aero-logo {
+    amt-logo {
       margin-inline-end: 8px;
     }
 
-    a:has(aero-logo) {
+    a:has(amt-logo) {
       @include mat.button-overrides((
         text-label-text-color: var(--mat-sys-on-surface),
         text-label-text-size: var(--mat-sys-title-medium-size),
@@ -34,7 +34,7 @@ import { Logo } from '../logo/logo';
       ))
     }
 
-    aero-theme-switcher {
+    amt-theme-switcher {
       margin-inline-start: auto;
     }
   `,

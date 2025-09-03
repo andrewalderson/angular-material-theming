@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'aero-logo',
+  selector: 'amt-logo',
   template: `<svg
     _ngcontent-ng-c586675657=""
     xmlns="http://www.w3.org/2000/svg"

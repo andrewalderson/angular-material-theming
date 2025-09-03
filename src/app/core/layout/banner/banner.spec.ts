@@ -17,7 +17,7 @@ describe('Banner', () => {
     const { getByRole } = await render(Banner, {
       componentImports: [ThemeSwitcherStub, Logo, RouterLink, MatButton],
     });
-    const logo = getByRole('link', { name: 'Aerosaltant' });
+    const logo = getByRole('link', { name: 'Angular Material Theming' });
 
     expect(logo).toBeInTheDocument();
   });
