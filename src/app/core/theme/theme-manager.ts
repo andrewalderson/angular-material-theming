@@ -25,7 +25,7 @@ export class ThemeManager {
   private readonly _platformId = inject(PLATFORM_ID);
 
   readonly theme = signal<Theme>(
-    (this._localStorage.getItem(THEME_PREFERENCE_STORAGE_KEY) as Theme) ??
+    (this._localStorage?.getItem(THEME_PREFERENCE_STORAGE_KEY) as Theme) ??
       'normal'
   );
 
@@ -40,11 +40,11 @@ export class ThemeManager {
 
       effect(() => {
         const theme = this.theme();
-        this._localStorage.setItem(THEME_PREFERENCE_STORAGE_KEY, theme);
+        this._localStorage?.setItem(THEME_PREFERENCE_STORAGE_KEY, theme);
       });
 
       this._document.defaultView
-        .matchMedia('(prefers-color-scheme: dark)')
+        ?.matchMedia('(prefers-color-scheme: dark)')
         .addEventListener('change', (event) => {
           const preferredScheme = event.matches ? 'dark' : 'light';
           this.theme.set(preferredScheme);

@@ -1,11 +1,16 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 
-import { InjectionToken } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { inject, InjectionToken, PLATFORM_ID } from '@angular/core';
 
-export const LOCAL_STORAGE = new InjectionToken<Storage>('LOCAL_STORAGE', {
-  providedIn: 'root',
-  factory: () => createSafeLocalStorage(),
-});
+export const LOCAL_STORAGE = new InjectionToken<Storage | null>(
+  'LOCAL_STORAGE',
+  {
+    providedIn: 'root',
+    factory: () =>
+      isPlatformBrowser(inject(PLATFORM_ID)) ? createSafeLocalStorage() : null,
+  }
+);
 
 const safeStorage: Storage = {
   get length() {
